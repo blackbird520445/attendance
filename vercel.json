@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "attendance/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "zeroConfig": true
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "attendance/wsgi.py"
+      }
+    ]
+  }
+  
