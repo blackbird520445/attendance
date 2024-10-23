@@ -33,7 +33,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Add the domain in ALLOWED_HOSTS
-ALLOWED_HOSTS = ['*']  # For development and testing purposes ONLY
+ALLOWED_HOSTS = ['.vercel.app']  # For development and testing purposes ONLY
 
 # Whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
