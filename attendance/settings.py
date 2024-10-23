@@ -25,8 +25,18 @@ SECRET_KEY = 'django-insecure-)%!yt_-o^(5z+7ac46tobz77$*yo)i1q$*rto*7mi7qxc6ds!s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['attendance.vercel.app']
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Add this if using media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Add the domain in ALLOWED_HOSTS
+ALLOWED_HOSTS = ['attendance.vercel.app', '.vercel.app']
+
+# Whitenoise settings
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Application definition
 
